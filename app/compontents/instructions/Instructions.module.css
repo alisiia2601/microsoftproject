@@ -1,0 +1,70 @@
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  padding: 0 4rem;
+  gap: 1rem;
+}
+
+/* .logo {
+  display: flex;
+  justify-content: left;
+  left: 1.61rem;
+  position: absolute;
+  top: 1.25rem;
+  z-index: 100;
+} */
+
+.textRow {
+  /* margin-bottom: 5rem; */
+}
+
+.header,
+.number {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.09rem;
+}
+
+.number {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  /* margin-left: 7.2rem; */
+  padding: 0.6rem;
+  padding-right: 0.5rem;
+  background: #9EB45A;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.paragraphStyle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragraph {
+  margin-top: 0.5rem;
+}
+
+.circle {
+  color: #9EB45A;
+  position: absolute;
+}
+
+.swipeHandIcon {
+  margin: 1.5rem auto;
+}
