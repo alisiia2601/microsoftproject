@@ -9,18 +9,14 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.row}>
         <span className={styles.footerIcon1}>
-        <Image src={jobFlowIcon} alt="project" width={20} />
+          <Image src={jobFlowIcon} alt="project" width={27} />
         </span>
       </div>
       <div className={styles.row}>
-        <span className={styles.footerIcon2}>
-          <RiUser3Fill />
-        </span>
+        <RiUser3Fill className={styles.footerIcon2} size={27}/>
       </div>
       <div className={styles.row}>
-        <span className={styles.footerIcon3}>
-          <RiBookmarkFill />
-        </span>
+        <RiBookmarkFill className={styles.footerIcon2} size={27}/>
       </div>
     </div>
   )
