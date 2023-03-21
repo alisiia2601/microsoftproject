@@ -1,0 +1,21 @@
+.footerContainer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 8.25rem;
+  gap: 29px;
+}
+
+
+.footerIcon1,
+.footerIcon2,
+.footerIcon3 {
+  color: #8A8992;
+}
