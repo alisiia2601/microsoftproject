@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { motion, useMotionValue, useTransform, useMotionTemplate } from 'framer-motion'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { RiArrowRightLine, RiBookmarkFill } from 'react-icons/ri'
 import styles from './Swiper.module.css'
 import SwipeButtons from './SwipeButtons'

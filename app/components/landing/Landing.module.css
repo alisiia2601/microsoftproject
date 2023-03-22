@@ -1,18 +1,25 @@
-.main{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+.landingimage
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
-.backimage{
-    position:fixed;
-    object-fit: fill;
-}
-.logo {
-    display: flex;
-    justify-content: left;
-    left: 1.61rem;
+.logo{
     position: absolute;
-    top: 1.25rem;
-    z-index: 100;
+    z-index: 1;
+    left: 34px;
+    top: 56px;
+}
+.overlay{
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .backgroundImage{
+      z-index: 0;
+      width: 100%;
+      height: 100%;
   }
