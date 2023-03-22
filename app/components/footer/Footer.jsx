@@ -9,7 +9,7 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.row}>
         <span className={styles.footerIcon1}>
-          <Image src={jobFlowIcon} alt="project" width={27} />
+          <Image src={jobFlowIcon} alt="project" width={31} />
         </span>
       </div>
       <div className={styles.row}>
