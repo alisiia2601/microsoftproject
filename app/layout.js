@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
             Gå vidare
           </Button>
         </Link>
-        
         {/* All button variations
         <Button variant='skogLight'>SkogLight Button</Button>
         <Button variant='ängLight'>ÄngLight Button</Button>
@@ -34,7 +33,6 @@ export default function RootLayout({ children }) {
         <Button variant='jordDark'>JordDark Button</Button>
         <Button variant='dark'>Dark Button</Button>
         <Button variant='light'>Light Button</Button> */}
-
         {/* <Footer /> */}
       </body>
     </html>
