@@ -6,7 +6,16 @@ import logo from '/public/images/skelleftea_logo_svart.png'
 export default function Landing() {
   return (
     <div className={styles.mainContainer}>
-        <Image src={backgroundImage} alt="background image" width={27}/>
+      <div className={styles.logo}>
+      <Image src={logo} alt="logo" width={107}/>
+      </div>
+      <div className={styles.backimage}>
+        <Image src={backgroundImage}
+        alt="background image"
+        layout="fill"
+        objectFit='cover'
+        />
+      </div>
     </div>
   )
 }
