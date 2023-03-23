@@ -4,6 +4,7 @@ import styles from '../instructions/Instructions.module.css'
 import logo from '/public/images/skelleftea_logo_svart.png'
 import swipeHandIcon from '/public/images/swipe-hand-icon.png'
 import { HiArrowLongRight } from 'react-icons/hi2'
+import { BsFillCircleFill } from 'react-icons/bs'
 
 export default function Instructions() {
   return (
@@ -21,6 +22,14 @@ export default function Instructions() {
         <div className={styles.paragraphStyle}>
           <span className={styles.number1}>1</span>
           <p className={styles.paragraph1}>Svep upp för att <br/>börja leta jobb</p>
+          <BsFillCircleFill 
+            className={styles.dot} 
+            size={53}
+            style={{
+              color: '#000',
+              marginRight: '370px'
+            }}
+          />
         </div>
         <Image 
           className={styles.swipeHandIcon}

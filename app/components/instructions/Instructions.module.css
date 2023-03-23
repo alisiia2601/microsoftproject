@@ -23,14 +23,14 @@
 } */
 
 .header {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .header,
 .number1,
 .number2 {
-  font-size: 0.6rem;
-  letter-spacing: 0.06rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .number2 {
-  margin-top: 1.2rem;
+  margin-top: 1.44rem;
 }
 
 .paragraphStyle {
@@ -73,6 +73,10 @@
 
 .circle {
   color: #9EB45A;
+  position: absolute;
+}
+
+.dot {
   position: absolute;
 }
 
