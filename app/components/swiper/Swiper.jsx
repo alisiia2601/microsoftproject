@@ -146,10 +146,6 @@ const Swiper = ({ data }) => {
     const doSomething = () => {
         console.log('function to remove job from array goes here');
       };
-    
-      function handleSave() {
-        console.log('Function for saving job to db or localstorage, cookie etc');
-      }
       
     const renderCards = () => {     
         return cards.map((card, index) => {
@@ -191,6 +187,8 @@ const Swiper = ({ data }) => {
                             console.log(card.id + ' is the card id to match with data, to save to saved jobs')
                             saveJob(card.id)
                           animateCardSwipe({ x: 0, y: -260 }); 
+                        } else {
+                          doSomething()
                       }
                     }}
                 animate={dragStart.animation}

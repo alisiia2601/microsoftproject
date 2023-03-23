@@ -15,7 +15,8 @@
   font-size: 0.75rem;
 }
 
-.container{
+.container {
+  position: relative;
   margin: 1.5rem auto;
   padding: 1rem 0;
   width: 90%;
@@ -66,4 +67,18 @@
 
 .clearBoth{
   clear:both;
+}
+
+/* close button */
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  font-size: 2.4rem;
+  font-weight: 200;
+  text-shadow: 1px 1px 2px rgb(105, 67, 67);
+  border: 1px solid rgba(121, 121, 121, 0.151);
+  border-radius: 5px;
 }
