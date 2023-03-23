@@ -3,22 +3,22 @@
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  margin-top: 5.5rem;
-  padding-top: 1rem;
+  /* margin-top: 5.5rem; */
+  /* padding-top: 1rem; */
   overflow-y: scroll;
   color: black;
 }
 
 .info{
-  margin: 2rem;
+  margin: 1.2rem;
   font-size: 0.75rem;
   text-transform: uppercase;
 }
 
 .container {
   position: relative;
-  margin: 1.5rem auto;
-  padding: 1rem 0;
+  margin: 1rem auto;
+  padding: 1.5rem 0;
   width: 90%;
   display: flex;
   align-items: center;
@@ -45,25 +45,43 @@
 }
 
 .jobContainer{
-  margin-left: 2rem;
- display: flex;
- flex-direction: column;
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.jobContainer > p {
+.title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.up {
+  margin-top: .3rem;
+  margin-bottom: 1.4rem;
+  font-weight: 400;
+}
+
+.down {
+  margin-top: .3rem;
+  font-weight: 400;
+}
+
+/* .jobContainer > p {
   font-size: 0.75rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 
 .up {
  font-weight: 400;
- margin-bottom: 1rem;
+ margin-bottom: 1.4rem;
 }
 
 .down{
   font-weight: 400;
-}
+} */
 
 .clearBoth{
   clear:both;
@@ -73,8 +91,8 @@
 
 .closeBtn {
   position: absolute;
-  top: 1rem;
-  right: 2rem;
+  top: 1.3rem;
+  right: 1.4rem;
   z-index: 10;
   font-size: 2.4rem;
   font-weight: 200;
