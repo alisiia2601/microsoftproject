@@ -3,6 +3,7 @@ import styles from '../landing/Landing.module.css'
 import backgroundImage from '/public/images/bakgrundsbild.png'
 import logo from '/public/images/skelleftea_logo_svart.png'
 import circles from '/public/images/circlesImage/cirklar.png'
+import { HiArrowLongRight } from 'react-icons/hi2'
 
 export default function Landing() {
   return (
@@ -11,10 +12,8 @@ export default function Landing() {
         <div className={styles.logo}>
         <Image src={logo} 
           alt="logo" 
-          layout='fixed'
+          layout='intrinsic'
           priority='true'
-          width = {82}
-          height = {46}
         />  
         </div>
         <div className={styles.overlay}>
@@ -27,6 +26,14 @@ export default function Landing() {
             priority='true'
           />
         </div>
+        <div className={styles.circlesContainer}>
+            <Image 
+            src={circles}
+            className={styles.circles}
+            alt="circle images"
+            priority="true"
+            />
+        </div>
         <div className={styles.text}>
           <p>Här finns jobben</p>
           <span>Välkommen hem!</span>
@@ -35,16 +42,13 @@ export default function Landing() {
      
       <button className={styles.hitta}>
         <p>Hitta ditt nästa drömjobb</p>
+        <HiArrowLongRight 
+          size={27}
+          style={{
+            color: '#000'
+          }}
+        />
       </button>
-      {/* <div className={styles.circlesContainer}>
-          <Image 
-          src={circles}
-          className={styles.circles}
-          alt="circle images"
-          layout="fixed"
-          priority="true"
-          />
-        </div> */}
       </div>
     </>
   )

@@ -12,6 +12,8 @@
     height: 100vh;
 }
 .logo{
+    width: 82px;
+    height: 46px;
     position: absolute;
     z-index: 1;
     left: 34px;
@@ -55,6 +57,9 @@
       height: 100%;
   }
   .hitta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: absolute;
     width: 312px;
     height: 69px;
@@ -69,16 +74,18 @@
       font-size: 15px;
       line-height: 18px;
       letter-spacing: -0.01em;
-      text-align: center;
+      margin-left: 37px;
   }
-  /* .circlesContainer{
+  .circlesContainer{
     position: absolute;
-    width: 514px;
-    height: 470px;
-    left: -49px;
-    top: 65px;    
+    top: 65px;
+    width: 100vw;
+    height: 80vh;
+    z-index: 1;
   }
   .circles{
-      position: absolute;
-  } */
-  
+    position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  } 
