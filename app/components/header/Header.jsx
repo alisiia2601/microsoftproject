@@ -1,5 +1,5 @@
 import Image from "next/legacy/image"
-import Link from 'next/Link'
+import Link from 'next/link'
 import styles from '../header/Header.module.css'
 import svartLogo from '/public/images/skelleftea_logo_svart.png'
 import notIcon from '/public/images/notification-icon.png'
