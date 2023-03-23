@@ -1,19 +1,19 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { motion, useMotionValue, useTransform, useMotionTemplate } from 'framer-motion'
-import Image from "next/legacy/image"
+import Image from 'next/image'
 import { RiArrowRightLine, RiBookmarkFill } from 'react-icons/ri'
 import styles from './Swiper.module.css'
 import SwipeButtons from './SwipeButtons'
 import { Jobs } from '@/data/jobsArray'
 
-// will be data
+// added these randomized images, employees and roles, so it will be (infinite swipeable)
 
 const Images = [Jobs[0].img, Jobs[1].img, Jobs[2].img, Jobs[3].img, Jobs[4].img, Jobs[5].img, Jobs[6].img, Jobs[7].img];
 
-const Employer = [Jobs[0].employer, Jobs[3].employer, Jobs[6].employer, Jobs[10].employer, Jobs[12].employer]
+const Employer = [Jobs[0].employer, Jobs[1].employer, Jobs[3].employer, Jobs[6].employer, Jobs[10].employer, Jobs[12].employer]
 
-const Role = [Jobs[1].role, Jobs[2].role, Jobs[5].role, Jobs[9].role, Jobs[1].role]
+const Role = [Jobs[1].role, Jobs[0].role, Jobs[2].role, Jobs[5].role, Jobs[9].role, Jobs[3].role]
 
 // random image for infinite swipe
 
@@ -99,6 +99,8 @@ const Swiper = ({ data }) => {
         animation: { x: 0, y: 0 }
     });
 
+    
+
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const scale = useTransform(dragStart.axis === 'x' ? x : y, [-200, 0, 200], [1, .9, 1]);
@@ -107,16 +109,15 @@ const Swiper = ({ data }) => {
     const boxShadow = useMotionTemplate`0 ${shadowBlur}px 25px -5px rgba(0, 0, 0, ${shadowOpacity})`;
     const onDirectionLock = axis => setDragStart({ ...dragStart, axis: axis });
     const animateCardSwipe = animation => {
-      setDragStart({ ...dragStart, animation });
-        
+      setDragStart({ ...dragStart, animation });        
       setTimeout(() => {
         setDragStart({ axis: null, animation: { x: 0, y: 0 } });
         x.set(0);
         y.set(0);
         setCards([{ 
-           /*  employer: randomEmployer(cards[4].employer), 
-            role: randomRole(cards[3].role),
-            img: randomImage(cards[5].role), */
+            employer: randomEmployer(cards[0].employer), 
+            role: randomRole(cards[0].role),
+            img: randomImage(cards[0].role),
           }, ...cards.slice(0, cards.length - 1)]);
       }, 200);
     }
@@ -145,10 +146,6 @@ const Swiper = ({ data }) => {
     const doSomething = () => {
         console.log('function to remove job from array goes here');
       };
-    
-      function handleSave() {
-        console.log('Function for saving job to db or localstorage, cookie etc');
-      }
       
     const renderCards = () => {     
         return cards.map((card, index) => {
@@ -190,6 +187,8 @@ const Swiper = ({ data }) => {
                             console.log(card.id + ' is the card id to match with data, to save to saved jobs')
                             saveJob(card.id)
                           animateCardSwipe({ x: 0, y: -260 }); 
+                        } else {
+                          doSomething()
                       }
                     }}
                 animate={dragStart.animation}
