@@ -11,8 +11,8 @@
 
 .info{
   margin: 2rem;
-  color: green;
   font-size: 0.75rem;
+  text-transform: uppercase;
 }
 
 .container {
