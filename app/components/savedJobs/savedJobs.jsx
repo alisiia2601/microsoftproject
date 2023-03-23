@@ -43,9 +43,9 @@ function SavedJobs() {
             </div> */}
              {/* ends here */}
             <div className={styles.jobContainer}> 
-            <p>Företag</p>  
+              <p className={styles.title}>Företag</p>  
               <h2 className={styles.up}>{job.employer}</h2>
-              <p>Tjänst</p>
+              <p className={styles.title}>Tjänst</p>
               <p className={styles.down}>{job.role}</p>
             </div>
             <div className={styles.clearBoth}></div>
