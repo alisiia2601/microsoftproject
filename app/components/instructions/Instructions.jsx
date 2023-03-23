@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import styles from '../instructions/Instructions.module.css'
 import logo from '/public/images/skelleftea_logo_svart.png'
 import swipeHandIcon from '/public/images/swipe-hand-icon.png'

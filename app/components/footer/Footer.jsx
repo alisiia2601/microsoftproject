@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import styles from '../footer/Footer.module.css'
 import { RiUser3Fill } from 'react-icons/ri'
 import { RiBookmarkFill } from 'react-icons/ri'
