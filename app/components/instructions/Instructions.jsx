@@ -19,18 +19,19 @@ export default function Instructions() {
       <h3 className={styles.header}>Instruktioner</h3>
       <div className={styles.textRow}>
         <div className={styles.paragraphStyle}>
-          <span className={styles.number}>1</span>
-          <p className={styles.paragraph}>Svep upp för att <br/>börja leta jobb</p>
+          <span className={styles.number1}>1</span>
+          <p className={styles.paragraph1}>Svep upp för att <br/>börja leta jobb</p>
         </div>
         <Image 
           className={styles.swipeHandIcon}
           src={swipeHandIcon} 
           alt="project" 
           width={47} 
+          height={47} 
           />
         <div className={styles.paragraphStyle}>
-          <span className={styles.number}>2</span>
-          <p className={styles.paragraph}>Klicka på kortet för att <br/>läsa mer information om jobbet</p>
+          <span className={styles.number2}>2</span>
+          <p className={styles.paragraph2}>Klicka på kortet för att <br/>läsa mer information om jobbet</p>
         </div>
       </div>
       <Link href={'/Swipe'}>
@@ -40,7 +41,7 @@ export default function Instructions() {
             size={27}
             style={{
               color: '#fff',
-              marginLeft: '144px'
+              marginLeft: '169px'
             }}
           />
         </button>
