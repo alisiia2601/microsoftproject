@@ -21,6 +21,9 @@
   top: 1.25rem;
   z-index: 100;
 } */
+.header {
+  margin-top: 12.5rem;
+}
 
 .header,
 .number {
@@ -61,4 +64,28 @@
 
 .swipeHandIcon {
   margin: 1.9rem auto;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: absolute; */
+  width: 312px;
+  height: 69px;
+  top: 562px;  
+  background-color: #9EB45A;  
+  border: none;
+  margin-top: 125px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.button p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  margin-left: 37px;
 }

@@ -1,4 +1,5 @@
 import Image from "next/legacy/image"
+import Link from 'next/link'
 import styles from '../landing/Landing.module.css'
 import backgroundImage from '/public/images/bakgrundsbild.png'
 import logo from '/public/images/skelleftea_logo_svart.png'
@@ -39,16 +40,17 @@ export default function Landing() {
           <span>Välkommen hem!</span>
           <p>Arbetsmarknaden i Skellefteå blomstrar och behöver dig och din kompetens.</p>
         </div>
-     
-      <button className={styles.hitta}>
-        <p>Hitta ditt nästa drömjobb</p>
-        <HiArrowLongRight 
-          size={27}
-          style={{
-            color: '#000'
-          }}
-        />
-      </button>
+      <Link href={'/Instructions'}>
+        <button className={styles.hitta}>
+          <p>Hitta ditt nästa drömjobb</p>
+          <HiArrowLongRight 
+            size={27}
+            style={{
+              color: '#000'
+            }}
+          />
+        </button>
+      </Link>
       </div>
     </>
   )
