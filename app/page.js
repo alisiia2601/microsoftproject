@@ -1,6 +1,6 @@
 // import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Instructions from './components/instructions/Instructions'
+import Landing from './components/Landing/Landing'
 import styles from './page.module.css'
 
 const inter = Inter({
@@ -12,8 +12,7 @@ const inter = Inter({
 export default function Home() {
   return (
     <main className={`${styles.main} ${inter.className}`}>
-      <Instructions />
-      {/* <h1>Hej</h1> */}
+      <Landing />
     </main>
   )
 }

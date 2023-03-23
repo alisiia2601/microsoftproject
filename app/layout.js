@@ -1,9 +1,5 @@
 import React from 'react'
 import './globals.css'
-import Link from 'next/link'
-// import Footer from '/app/components/footer/Footer.jsx'
-import Button from '/app/components/buttons/Buttons.jsx'
-import styles from './components/buttons/Buttons.module.css'
 
 export const metadata = {
   title: 'Swipe North - Team 1',
@@ -15,27 +11,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        <Link href={'/Swipe'}>
-          <Button 
-            variant='skogDark'
-            className={styles.button}
-          >
-            Gå vidare
-          </Button>
-        </Link>
-        
-        {/* All button variations
-        <Button variant='skogLight'>SkogLight Button</Button>
-        <Button variant='ängLight'>ÄngLight Button</Button>
-        <Button variant='ängDark'>ÄngDark Button</Button>
-        <Button variant='vikLight'>VikLight Button</Button>
-        <Button variant='vikDark'>VikDark Button</Button>
-        <Button variant='jordLight'>JordLight Button</Button>
-        <Button variant='jordDark'>JordDark Button</Button>
-        <Button variant='dark'>Dark Button</Button>
-        <Button variant='light'>Light Button</Button> */}
-
-        {/* <Footer /> */}
       </body>
     </html>
   )
