@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../landing/Landing.module.css'
 import backgroundImage from '/public/images/bakgrundsbild.png'
-import logo from '/public/images/skelleftea_logo_svart.png'
+import logo from '/public/images/skelleftea_logo_svart_no-dot.png'
 import circles from '/public/images/circlesImage/cirklar.png'
 import { HiArrowLongRight } from 'react-icons/hi2'
 
@@ -10,7 +10,7 @@ export default function Landing() {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.logo}>
-        <Image src={logo} alt="logo" width={107} />
+        <Image src={logo} alt="logo" width={87} />
       </div>
       <div className={styles.overlay}></div>
       <div className={styles.landingimage}>
