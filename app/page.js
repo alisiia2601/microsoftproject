@@ -1,6 +1,6 @@
 // import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Landing from './components/Landing/Landing'
+import Landing from './components/landing/Landing'
 import styles from './page.module.css'
 
 const inter = Inter({
