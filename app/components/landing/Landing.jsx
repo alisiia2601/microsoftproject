@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 import styles from '../landing/Landing.module.css'
 import backgroundImage from '/public/images/bakgrundsbild.png'
@@ -9,23 +9,22 @@ import { HiArrowLongRight } from 'react-icons/hi2'
 export default function Landing() {
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.logo}>
-        <Image src={logo} alt="logo" width={87} />
-      </div>
-      <div className={styles.overlay}></div>
-      <div className={styles.landingimage}>
-        <Image src={backgroundImage}
+      <Image src={backgroundImage}
             alt="background image"
             layout='fill'
             objectFit='cover'
             priority='true'
-        /> 
+      /> 
+      <div className={styles.logo}>
+        <Image src={logo} alt="logo"/>
       </div>
+      <div className={styles.overlay}></div>
       <div className={styles.circlesContainer}>
         <Image 
           src={circles}
           className={styles.circles}
           alt="circle images"
+          layout='fixed'
           priority="true"
         />  
       </div>
@@ -35,16 +34,18 @@ export default function Landing() {
           <p>Arbetsmarknaden i Skellefteå blomstrar och behöver dig och din kompetens.</p>
       </div>
       <Link href={'/Instructions'}>
-        <button className={styles.button}>
-          <p>Hitta ditt nästa drömjobb</p>
-          <HiArrowLongRight 
-            size={27}
-            style={{
-              color: '#000',
-              marginLeft: '63px'
-            }}
-          />
-        </button>
+        <div className={styles.buttonContainer}>
+          <button className={styles.button}>
+            <p>Hitta ditt nästa drömjobb</p>
+            <HiArrowLongRight 
+              size={27}
+              style={{
+                color: '#000',
+                marginLeft: '63px'
+              }}
+            />
+          </button>
+        </div>
       </Link>
     </div>
   )
