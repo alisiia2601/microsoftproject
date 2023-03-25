@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image'
+import Image from "next/image"
 import Link from 'next/link'
 import styles from '../landing/Landing.module.css'
 import backgroundImage from '/public/images/bakgrundsbild.png'
@@ -9,24 +9,31 @@ import { HiArrowLongRight } from 'react-icons/hi2'
 export default function Landing() {
   return (
     <div className={styles.mainContainer}>
-      <Image src={backgroundImage}
-            alt="background image"
-            layout='fill'
-            objectFit='cover'
-            priority='true'
-      /> 
+      <Image
+        src={backgroundImage}
+        alt="background image"
+        priority='true'
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover"
+        }} /> 
       <div className={styles.logo}>
-        <Image src={logo} alt="logo"/>
+        <Image
+          src={logo}
+          alt="logo"
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <div className={styles.overlay}></div>
       <div className={styles.circlesContainer}>
-        <Image 
+        <Image
           src={circles}
           className={styles.circles}
           alt="circle images"
-          layout='fixed'
-          priority="true"
-        />  
+          priority="true" />  
       </div>
       <div className={styles.text}>
           <p>Här finns jobben</p>
@@ -48,5 +55,5 @@ export default function Landing() {
         </div>
       </Link>
     </div>
-  )
+  );
 }
