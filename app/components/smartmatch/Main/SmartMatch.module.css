@@ -45,4 +45,16 @@
    position: absolute;
    opacity: 0;
 }
-
+.errorMsg{
+    text-align: center;
+    color:#D30000;
+}
+.viewBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: #006400;
+    margin-top: 30px;
+}
