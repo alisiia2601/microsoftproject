@@ -3,6 +3,7 @@
 .iconsWrapper {
     padding: 1rem;
     width: 100%;
+    height: 5.5rem;
     position: absolute;
     bottom: 0;
     display: flex;

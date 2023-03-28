@@ -75,19 +75,22 @@ const Swiper = ({ data }) => {
                             priority
                             fill
                             />
-                    </div>
+                      </div>
+                      <div className={styles.overlay}></div>
                         <div className={styles.info}>
                                 <h2 className={styles.employer}>{employer}</h2>
                                 <h4 className={styles.role}>{role}</h4>
                             
                         </div>            
                     </TinderCard>
+                    <div className={styles.arrowIcon}>
+                      <Link href={'/Swipe/' + id}>
+                        <RiArrowRightLine />
+                      </Link>
+              </div> 
                 </div>                        
                 ))
-          }
-           <div className={styles.arrowIcon}>
-                <RiArrowRightLine />
-              </div>  
+          } 
               <SwipeButtons />
         </div>
         </>
