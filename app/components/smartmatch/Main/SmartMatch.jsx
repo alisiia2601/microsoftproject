@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import styles from '../Main/SmartMatch.module.css'
 import UploadCV from '../UploadCV'
-import halfEllipse from '/public/images/Ellipse.png'
+import halfEllipse from '/public/images/circlesImage/ellipse-half.png'
 
 export default function SmartMatch() {
   return (
