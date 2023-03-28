@@ -55,13 +55,6 @@ const Swiper = ({ data }) => {
                 {
                 data.map(({  employer, role, desc, quali, img, id }) => (
                 <div key={id}>
-                    <Link href={'/Swipetwo/' + id}
-                    className={styles.readmore}
-
-                >
-                    read more
-                        </Link>
-                        {/* <Saved save={save} /> */}
                     <TinderCard                            
                     className={styles.swiper}
                     onSwipe={(dir) => swiped(dir,  employer, role, desc, quali, img, id)}
