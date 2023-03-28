@@ -4,7 +4,7 @@
     align-items: center;
     justify-content:center;
     width: 100vw;
-    height: 73vh;
+    height: 70vh;
 }
 .buttons{
     display: flex;
@@ -73,7 +73,8 @@
 }
 .buttons input{
    position: absolute;
-   margin-top: 90px;
+   margin-top: 20px;
+   padding:130px ;
    opacity: 0; 
 }
 .errorMsg{

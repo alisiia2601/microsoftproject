@@ -16,11 +16,11 @@ export default function Footer() {
       </Link>
       </div>
 
-      {/* <Link href='/Swipe'> */}
+      <Link href='/SmartMatch'>
         <div className={styles.row}>
           <RiUser3Fill className={styles.footerIcon2} size={27}/>
         </div>
-      {/* </Link> */}
+      </Link> 
       
       <Link href='/Savedpage'>
         <div className={styles.row}>

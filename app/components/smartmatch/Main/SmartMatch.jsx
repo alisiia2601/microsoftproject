@@ -1,7 +1,7 @@
 'use client'
 import styles from '../Main/SmartMatch.module.css'
 import UploadCV from '../UploadCV'
-import ellipse from '/public/images/Ellipse.png'
+import ellipse from '/public/images/halfEllipse.png'
 import Image from "next/image"
 
 export default function SmartMatch() {
