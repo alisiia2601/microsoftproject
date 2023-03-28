@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import styles from '../smartmatch/Main/SmartMatch.module.css'
 import {CgSoftwareUpload} from 'react-icons/cg'
+import {FaLinkedin} from 'react-icons/fa'
+import { HiArrowLongRight } from 'react-icons/hi2'
 
 
 export default function UploadCV() {
@@ -21,7 +23,7 @@ export default function UploadCV() {
              console.log(e.target.result)
            }
        }else{
-         setPdfError('Not a valid pdf: Please select only PDF')
+         setPdfError('Inte en giltig pdf: Vänligen välj endast PDF')
        }
      }else{
      console.log('Please select a PDF file format!')
@@ -32,20 +34,26 @@ export default function UploadCV() {
     <div>
         <div className={styles.viewBox}>
             {pdfFile&&(
-              <div> Render Pdf file</div>
+              <div>Din fil har laddats upp!</div>
             )}
-            {!pdfFile&&<>No file is selected yet!</>}
+            {!pdfFile&&<>Ingen fil har valts!</>}
         </div>
-         <div className={styles.buttons}>
+        <div className={styles.errorMsg}> {pdfError&&<span className={styles.danger}>{pdfError}</span>}</div>
+        
+        <div className={styles.buttons}>
           <input type='file' className={styles.fileInput} placeholder='file'
           onChange={uploadCV}
           />
           <button className={styles.button1}>
-            <p>Add CV</p> 
-            <CgSoftwareUpload size={20}/>
+            <p>Ladda upp CV</p> 
+            <CgSoftwareUpload size={24}/>
+          </button>
+          <button className={styles.button2}>
+            <FaLinkedin size={20}/>
+              <p>Connecta med LinkedIn</p> 
+            <HiArrowLongRight size={20}/>
           </button>
         </div>
-        <div className={styles.errorMsg}> {pdfError&&<span className={styles.danger}>{pdfError}</span>}</div>
     </div>
   )
 }
