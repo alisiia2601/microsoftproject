@@ -56,6 +56,10 @@ const JobDetails = ({ employer, role, desc, quali, img, id }) => {
             setJobsLibrary([])
         }
     }, [])
+    
+    const handleApply = () => {
+      //
+    };
 
   return (
       <article className={styles.jobsWrapper} key={id}>
@@ -81,6 +85,10 @@ const JobDetails = ({ employer, role, desc, quali, img, id }) => {
         <h3 className={styles.jobDesc}>Anställningsform</h3>
         <p>Tillsvidareanställning</p>
           </div>
+          <button className={styles.applyButton} onClick={handleApply}>
+        <span>Ansök här</span>
+        <span>&rarr;</span>
+      </button>
           <div>
         <motion.p
         variants={variants}
