@@ -12,7 +12,7 @@ const variants = {
     hide: { opacity: 0, x: 300 },
   }
 
-const JobDetails = ({ employer, role, desc, quali, img, id }) => {   
+const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {   
     const [showMsg, setShowMsg] = useState(false)
     const [jobsLibrary, setJobsLibrary] = useState([])
     const router = useRouter()
@@ -23,7 +23,7 @@ const JobDetails = ({ employer, role, desc, quali, img, id }) => {
 
           if (id) {
             newJob = {
-              employer, role, desc, quali, img, id
+              employer, role, desc, quali, img, id, link
             }
           } else {
             return
@@ -56,10 +56,12 @@ const JobDetails = ({ employer, role, desc, quali, img, id }) => {
             setJobsLibrary([])
         }
     }, [])
-    
+
     const handleApply = () => {
-      //
+      window.open(link,
+       '_blank');
     };
+    
 
   return (
       <article className={styles.jobsWrapper} key={id}>
