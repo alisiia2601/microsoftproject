@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartMatch from '@/app/components/smartmatch/Main/SmartMatch'
+import SmartMatch from '../components/smartmatch/Main/SmartMatch'
 import Footer from '/app/components/footer/Footer.jsx'
 import Header from '/app/components/header/Header.jsx'
 

@@ -1,15 +1,15 @@
 'use client'
+import Image from 'next/image'
 import styles from '../Main/SmartMatch.module.css'
 import UploadCV from '../UploadCV'
-import ellipse from '/public/images/halfEllipse.png'
-import Image from "next/image"
+import halfEllipse from '/public/images/Ellipse.png'
 
 export default function SmartMatch() {
   return (
     <div className={styles.mainContent}>
       <div className={styles.halfCircle}>
         <Image
-          src={ellipse}
+          src={halfEllipse}
           alt="half circle"
           priority='true'
           /> 
