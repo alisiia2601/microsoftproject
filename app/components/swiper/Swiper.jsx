@@ -1,4 +1,101 @@
 "use client"
+import Image from "next/image"
+import dynamic from "next/dynamic"
+import Link from "next/link"
+import { RiArrowRightLine } from 'react-icons/ri'
+import SwipeButtons from "./SwipeButtons"
+
+// components 
+/* import Saved from "../saved/Saved" */
+
+// styles
+import styles from './Swiper.module.css'
+
+const Swiper = ({ data }) => {
+   /*  const [save, setSave] = useState(false) */
+
+    const TinderCard = dynamic(() => import('react-tinder-card'), {
+        ssr: false
+    });
+    
+    const saveJob = ( employer, role, desc, quali, img, id) => {
+                    
+        let myjobs = JSON.parse(localStorage.getItem('myjobs') || "[]")
+        console.log(myjobs)
+        let newJob;
+    
+          if (id) {
+            newJob = {
+                employer, role, desc, quali, img, id
+            }
+          } else {
+            return
+          }
+    
+        myjobs.push(newJob)                
+        window.localStorage.setItem('myjobs', JSON.stringify(myjobs))
+    }
+
+
+      const onCardLeftScreen = (myIdentifier) => {
+        console.log('id: ' + myIdentifier + ' left the screen')
+    }
+    
+    const swiped = (dir,  employer, role, desc, quali, img, id) => {
+        console.log('id is : ' + id, ' direction is : ' + dir)
+        if (dir == 'up') {
+            console.log('direction is up')
+            saveJob(employer, role, desc, quali, img, id)
+        }
+      }
+
+    return (
+        <>            
+            <div className={styles.cardContainer}>
+                {
+                data.map(({  employer, role, desc, quali, img, id }) => (
+                <div key={id}>
+                    <Link href={'/Swipetwo/' + id}
+                    className={styles.readmore}
+
+                >
+                    read more
+                        </Link>
+                        {/* <Saved save={save} /> */}
+                    <TinderCard                            
+                    className={styles.swiper}
+                    onSwipe={(dir) => swiped(dir,  employer, role, desc, quali, img, id)}
+                    onCardLeftScreen={() => onCardLeftScreen(id)}            
+                    >
+                    <div className={styles.swiperImage} >
+                        <Image
+                            className={styles.img}
+                            src={img}
+                            alt={role}
+                            priority
+                            fill
+                            />
+                    </div>
+                        <div className={styles.info}>
+                                <h2 className={styles.employer}>{employer}</h2>
+                                <h4 className={styles.role}>{role}</h4>
+                            
+                        </div>            
+                    </TinderCard>
+                </div>                        
+                ))
+          }
+           <div className={styles.arrowIcon}>
+                <RiArrowRightLine />
+              </div>  
+              <SwipeButtons />
+        </div>
+        </>
+    )
+}
+
+export default Swiper
+/*
 import React, { useState, useEffect } from 'react'
 import { motion, useMotionValue, useTransform, useMotionTemplate } from 'framer-motion'
 import Image from 'next/image'
@@ -7,7 +104,6 @@ import styles from './Swiper.module.css'
 import SwipeButtons from './SwipeButtons'
 import { Jobs } from '@/data/jobsArray'
 
-// added these randomized images, employees and roles, so it will be (infinite swipeable)
 
 const Images = [Jobs[0].img, Jobs[1].img, Jobs[2].img, Jobs[3].img, Jobs[4].img, Jobs[5].img, Jobs[6].img, Jobs[7].img];
 
@@ -15,7 +111,7 @@ const Employer = [Jobs[0].employer, Jobs[1].employer, Jobs[3].employer, Jobs[6].
 
 const Role = [Jobs[1].role, Jobs[0].role, Jobs[2].role, Jobs[5].role, Jobs[9].role, Jobs[3].role]
 
-// random image for infinite swipe
+
 
 const randomImage = current => {
   while (true) {
@@ -49,7 +145,7 @@ const randomId = (max) => {
 
 const newId = randomId(100)
 console.log('random id: ' + newId)
-// the card
+
 
 const Card = ({ card, style, onDirectionLock, onDragStart, onDragEnd, animate }) => {
   
@@ -62,7 +158,7 @@ const Card = ({ card, style, onDirectionLock, onDragStart, onDragEnd, animate })
         onDirectionLock={onDirectionLock}
         onDragStart={(e) => {
             e.stopPropagation()
-            /* console.log(e.target.attributes) */
+            
         }}
         onDragEnd={onDragEnd}
         animate={animate}
@@ -222,4 +318,4 @@ const Swiper = ({ data }) => {
           )
 }
 
-export default Swiper
+export default Swiper */
