@@ -1,7 +1,7 @@
 'use client'
+import Image from 'next/image'
 import styles from '../Main/SmartMatch.module.css'
 import UploadCV from '../UploadCV'
-import Image from "next/image"
 import halfEllipse from '/public/images/Ellipse.png'
 
 export default function SmartMatch() {
