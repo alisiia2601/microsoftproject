@@ -3,8 +3,8 @@
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  /* margin-top: 5.5rem; */
-  /* padding-top: 1rem; */
+  margin-top: 5.5rem;
+  padding-top: 1rem;
   overflow-y: scroll;
   color: black;
 }
@@ -83,6 +83,7 @@
   font-weight: 400;
 } */
 
+
 .clearBoth{
   clear:both;
 }
@@ -99,4 +100,4 @@
   text-shadow: 1px 1px 2px rgb(105, 67, 67);
   border: 1px solid rgba(121, 121, 121, 0.151);
   border-radius: 5px;
-}
+  }
