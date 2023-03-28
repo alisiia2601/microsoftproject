@@ -2,14 +2,14 @@
 import styles from '../Main/SmartMatch.module.css'
 import UploadCV from '../UploadCV'
 import Image from "next/image"
-import Ellipse from '/public/images/Ellipse.png'
+import ellipse from '/public/images/Ellipse.png'
 
 export default function SmartMatch() {
   return (
     <div className={styles.mainContent}>
       <div className={styles.halfCircle}>
         <Image
-          src={Ellipse}
+          src={ellipse}
           alt="half circle"
           priority='true'
           /> 
