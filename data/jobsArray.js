@@ -1,16 +1,16 @@
-import IMG1 from '/public/images/jobImages/image1.jpg';
-import IMG2 from '/public/images/jobImages/image2.jpg';
-import IMG3 from '/public/images/jobImages/image3.jpg';
-import IMG4 from '/public/images/jobImages/image4.jpg';
-import IMG5 from '/public/images/jobImages/image5.jpg';
-import IMG6 from '/public/images/jobImages/image6.jpg';
-import IMG7 from '/public/images/jobImages/image7.jpg';
-import IMG8 from '/public/images/jobImages/image8.jpg';
-import IMG9 from '/public/images/jobImages/image9.jpg';
-import IMG10 from '/public/images/jobImages/image10.jpg';
-import IMG11 from '/public/images/jobImages/image11.jpg';
-import IMG12 from '/public/images/jobImages/image12.jpg';
-import IMG13 from '/public/images/jobImages/image13.jpg';
+import IMG1 from '/public/images/jobImages/image1.webp';
+import IMG2 from '/public/images/jobImages/image2.webp';
+import IMG3 from '/public/images/jobImages/image3.webp';
+import IMG4 from '/public/images/jobImages/image4.webp';
+import IMG5 from '/public/images/jobImages/image5.webp';
+import IMG6 from '/public/images/jobImages/image6.webp';
+import IMG7 from '/public/images/jobImages/image7.webp';
+import IMG8 from '/public/images/jobImages/image8.webp';
+import IMG9 from '/public/images/jobImages/image9.webp';
+import IMG10 from '/public/images/jobImages/image10.webp';
+import IMG11 from '/public/images/jobImages/image11.webp';
+import IMG12 from '/public/images/jobImages/image12.webp';
+import IMG13 from '/public/images/jobImages/image13.webp';
 
 // data for the project use this
 
