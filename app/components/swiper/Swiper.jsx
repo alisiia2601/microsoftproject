@@ -60,6 +60,11 @@ const Swiper = ({ data }) => {
                     onSwipe={(dir) => swiped(dir,  employer, role, desc, quali, img, id)}
                     onCardLeftScreen={() => onCardLeftScreen(id)}            
                     >
+                      <div className={styles.arrowIcon}>
+                      <Link href={'/Swipe/' + id}>
+                        <RiArrowRightLine />
+                      </Link>
+              </div> 
                     <div className={styles.swiperImage} >
                         <Image
                             className={styles.img}
@@ -76,11 +81,6 @@ const Swiper = ({ data }) => {
                             
                         </div>            
                     </TinderCard>
-                    <div className={styles.arrowIcon}>
-                      <Link href={'/Swipe/' + id}>
-                        <RiArrowRightLine />
-                      </Link>
-              </div> 
                 </div>                        
                 ))
           } 
