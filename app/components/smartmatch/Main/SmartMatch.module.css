@@ -4,7 +4,7 @@
     align-items: center;
     justify-content:center;
     width: 100vw;
-    height: 70vh;
+    height: 100%;
 }
 .buttons{
     display: flex;
@@ -15,7 +15,7 @@
 
 .mainContent h1{
     margin-bottom: 24px;
-    margin-top: 140px;
+    margin-top: 100px;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -78,9 +78,11 @@
    opacity: 0; 
 }
 .errorMsg{
+    display:inline-block;
     text-align: center;
     color:#D30000;
     font-size: 20px;
+    margin-top: 10px;
 }
 .viewBox{
     display: flex;
