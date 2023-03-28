@@ -1,18 +1,119 @@
 "use client"
+import React, { useRef, useEffect, useState, useMemo } from 'react'
 import Image from "next/image"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { RiArrowRightLine } from 'react-icons/ri'
-import SwipeButtons from "./SwipeButtons"
-
 // components 
-/* import Saved from "../saved/Saved" */
-
+import SwipeButtons from "./SwipeButtons"
 // styles
 import styles from './Swiper.module.css'
+import styled from './Confetti.module.css'
+
+const COLORS = ['#2ecc71', '#3498db', '#e67e22', '#e67e22', '#e74c3c'];
+
+if (typeof window !== "undefined") {
+    const TOP_OFFSET = window.innerHeight;
+  }
+
+const LEFT_OFFSET = 150;
+
+const randomNumber = (min, max) => min + Math.floor(Math.random()*(max - min));
+
+const randomColor = () => COLORS[randomNumber(0,COLORS.length)];
+
+const Particle = ({children, size}) => {
+  const ref = useRef();
+  const child = React.Children.only(children);
+    const top = randomNumber(-200, -size[1]);
+
+    
+  
+  useEffect(() => {
+    ref.current.style.setProperty('--x', `${randomNumber(-LEFT_OFFSET, LEFT_OFFSET)}px`);
+    ref.current.style.setProperty('--y', `${window.innerHeight - top + randomNumber(0, 300)}px`);
+    ref.current.style.setProperty('--rotate', `${randomNumber(200, 3000)}deg`);
+  }, []);
+  
+  return React.cloneElement(child, {ref, style: {
+    '--color': randomColor(),
+    '--size': `${randomNumber(...size)}px`,
+    '--rotate': '0deg',
+    '--x': '0px',
+    '--y': '0px',
+    top: top,
+    left: randomNumber(0, window.innerWidth),
+  }});
+};
+
+const CircularParticle = () => (
+  <Particle size={[5, 10]}>
+    <div className={`${styled.particle} ${styled.circular}`}/>
+  </Particle>
+);
+
+const RectangularParticle = () => (
+  <Particle size={[5, 10]}>
+    <div className={`${styles.particle} ${styled.rectangular}`}/>
+  </Particle>
+);
+
+const SquiggleParticle = () => (
+  <Particle size={[15, 45]}>
+    <svg className={`${styled.particle} ${styled.squiggle}`}
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 30 200">
+      <path d="M15 0 Q 30 25 15 50 Q 0 75 15 100 Q 30 125 15 150 Q 0 175 15 200"/>
+    </svg>
+  </Particle>
+);
+
+const Particles = (({count: num}) => {
+  
+  const particles = [];
+  const types = [SquiggleParticle, RectangularParticle, CircularParticle];
+
+  while(num--) {
+    const Particle = types[randomNumber(0, 3)];
+    particles.push(
+      <Particle key={num}/>
+    );
+  }
+  
+  return (
+    <div className={styled.particles}>
+      {particles}
+    </div>
+  );
+});
+
+let id = 1;
+
+
+
 
 const Swiper = ({ data }) => {
-   /*  const [save, setSave] = useState(false) */
+  const [jobData, setJobData] = useState(data)
+  const [particles, setParticles] = useState([]);
+
+
+console.log('Jobdata update: ' + jobData.map(job => console.log(job)))
+
+  const removeJob = (id) => {
+      const newJobs = jobData.filter(job => job.id !== id);
+      setJobData(newJobs);
+  }
+
+  const handleOnSwipe = () => {
+    const _id = id;
+    id++;
+    
+    setParticles(particles => [...particles, _id]);
+    setTimeout(() => {
+      // Cleanup
+      setParticles(particles => particles.filter(id => id !== _id));
+    }, 5000);
+  }
 
     const TinderCard = dynamic(() => import('react-tinder-card'), {
         ssr: false
@@ -45,16 +146,35 @@ const Swiper = ({ data }) => {
         console.log('id is : ' + id, ' direction is : ' + dir)
         if (dir == 'up') {
             console.log('direction is up')
-            saveJob(employer, role, desc, quali, img, id)
-        }
+          saveJob(employer, role, desc, quali, img, id)
+          handleOnSwipe()
+          removeJob(id)
+      } 
+      if(dir == 'down') {
+          removeJob(id)
+          console.log('swiped down')
       }
+      if(dir == 'left') {
+          removeJob(id)
+          console.log('swiped left')
+      }
+      if(dir == 'right') {
+          removeJob(id)
+          console.log('swiped right')
+      }
+      
+  }
+  
 
     return (
         <>            
-            <div className={styles.cardContainer}>
+        <div className={styles.cardContainer}>
                 {
-                data.map(({  employer, role, desc, quali, img, id }) => (
-                <div key={id}>
+                jobData.map(({  employer, role, desc, quali, img, id }) => (
+                  <div key={id}>
+                     {particles.map(id => (
+        <Particles key={id} count={Math.floor(innerWidth / 10)}/>
+      ))}   
                     <TinderCard                            
                     className={styles.swiper}
                     onSwipe={(dir) => swiped(dir,  employer, role, desc, quali, img, id)}
@@ -91,227 +211,3 @@ const Swiper = ({ data }) => {
 }
 
 export default Swiper
-/*
-import React, { useState, useEffect } from 'react'
-import { motion, useMotionValue, useTransform, useMotionTemplate } from 'framer-motion'
-import Image from 'next/image'
-import { RiArrowRightLine, RiBookmarkFill } from 'react-icons/ri'
-import styles from './Swiper.module.css'
-import SwipeButtons from './SwipeButtons'
-import { Jobs } from '@/data/jobsArray'
-
-
-const Images = [Jobs[0].img, Jobs[1].img, Jobs[2].img, Jobs[3].img, Jobs[4].img, Jobs[5].img, Jobs[6].img, Jobs[7].img];
-
-const Employer = [Jobs[0].employer, Jobs[1].employer, Jobs[3].employer, Jobs[6].employer, Jobs[10].employer, Jobs[12].employer]
-
-const Role = [Jobs[1].role, Jobs[0].role, Jobs[2].role, Jobs[5].role, Jobs[9].role, Jobs[3].role]
-
-
-
-const randomImage = current => {
-  while (true) {
-    const index = Math.floor(Math.random() * Images.length);
-    if (current != Images[index]) {
-      return Images[index];
-    } 
-  }
-}
-const randomEmployer = current => {
-  while (true) {
-    const index = Math.floor(Math.random() * Employer.length);
-    if (current != Employer[index]) {
-      return Employer[index];
-    } 
-  }
-}
-const randomRole = current => {
-  while (true) {
-    const index = Math.floor(Math.random() * Role.length);
-    if (current != Role[index]) {
-      return Role[index];
-    } 
-  }
-}
-
-const randomId = (max) => {    
-    const index = Math.floor(Math.random() * max);
-    return index
-}
-
-const newId = randomId(100)
-console.log('random id: ' + newId)
-
-
-const Card = ({ card, style, onDirectionLock, onDragStart, onDragEnd, animate }) => {
-  
-    return (    
-    <motion.div
-        className={styles.card}
-        drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-        dragDirectionLock
-        onDirectionLock={onDirectionLock}
-        onDragStart={(e) => {
-            e.stopPropagation()
-            
-        }}
-        onDragEnd={onDragEnd}
-        animate={animate}
-        style={{ ...style }}
-        transition={{ ease: [.6, .05, -.01, .9] }}
-      whileTap={{ scale: .98 }}
-    >
-        <RiBookmarkFill className={styles.saved}  />
-        <div className={styles.info}>
-              <h2>{card.employer}</h2>
-              <h4>{card.role}</h4>
-          </div>
-          
-            <div className={styles.img}>
-        <Image
-              src={card.img}
-              alt={`${card.role}`}
-                    priority
-                    fill
-                    sizes="(max-width: 768px) 90%,
-                    (max-width: 1200px) 50vw,
-                    33vw"
-        />
-            </div>
-    </motion.div>
-)}
-
-const Swiper = ({ data }) => {
-    const [cards, setCards] = useState(data);
-    
-    const [dragStart, setDragStart] = useState({
-        axis: null,
-        initial: {opacity: 0},
-        animation: { x: 0, y: 0 }
-    });
-
-    
-
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-    const scale = useTransform(dragStart.axis === 'x' ? x : y, [-200, 0, 200], [1, .9, 1]);
-    const shadowBlur = useTransform(dragStart.axis === 'x' ? x : y, [-200, 0, 200], [0, 25, 0]);
-    const shadowOpacity = useTransform(dragStart.axis === 'x' ? x : y, [-200, 0, 200], [0, .4, 0]);
-    const boxShadow = useMotionTemplate`0 ${shadowBlur}px 25px -5px rgba(0, 0, 0, ${shadowOpacity})`;
-    const onDirectionLock = axis => setDragStart({ ...dragStart, axis: axis });
-    const animateCardSwipe = animation => {
-      setDragStart({ ...dragStart, animation });        
-      setTimeout(() => {
-        setDragStart({ axis: null, animation: { x: 0, y: 0 } });
-        x.set(0);
-        y.set(0);
-        setCards([{ 
-            employer: randomEmployer(cards[0].employer), 
-            role: randomRole(cards[0].role),
-            img: randomImage(cards[0].role),
-          }, ...cards.slice(0, cards.length - 1)]);
-      }, 200);
-    }
-
-
-    const onDragEnd = (info) => {
-      if (dragStart.axis === 'x') {
-        if (info.offset.x >= 100) 
-          animateCardSwipe({ x: 360, y: 0 });
-        else if (info.offset.x <= -100)
-          animateCardSwipe({ x: -360, y: 0 }); 
-      } else {
-          if (info.offset.y >= 300) {
-              console.log('will delete from deck')
-            animateCardSwipe({ x: 0, y: 260 }); 
-        }
-         
-        else if (info.offset.y <= -300) {
-              console.log('will save to job')
-              console.log(info)
-            animateCardSwipe({ x: 0, y: -260 }); 
-        }
-      }
-    }
-    
-    const doSomething = () => {
-        console.log('function to remove job from array goes here');
-      };
-      
-    const renderCards = () => {     
-        return cards.map((card, index) => {
-            const { employer, role, desc, quali, id, img} = card
-
-            const saveJob = (cardId) => {
-                    
-                let myjobs = JSON.parse(localStorage.getItem('myjobs') || "[]")
-                console.log(myjobs)
-                let newJob;
-            
-                  if (cardId) {
-                    newJob = {
-                        id,
-                        employer,
-                        role,
-                        desc,
-                        quali,
-                        img
-                    }
-                  } else {
-                    return
-                  }
-            
-                myjobs.push(newJob)                
-                window.localStorage.setItem('myjobs', JSON.stringify(myjobs))
-            }
-
-          if (index === cards.length - 1) {
-            return (
-              <Card 
-                card={card}
-                key={index}
-                style={{ x, y, zIndex: index }}
-                onDirectionLock={axis => onDirectionLock(axis)}
-                    onDragEnd={(e, info) => {
-                        onDragEnd(info)
-                        if (info.offset.y <= -300) {
-                            console.log(card.id + ' is the card id to match with data, to save to saved jobs')
-                            saveJob(card.id)
-                          animateCardSwipe({ x: 0, y: -260 }); 
-                        } else {
-                          doSomething()
-                      }
-                    }}
-                animate={dragStart.animation}
-              />
-            )
-          } else return (
-            <Card 
-                card={card}
-                key={index}
-                style={{
-                scale, 
-                boxShadow,
-                zIndex: index
-              }}
-            />
-          )
-        })
-      }
-      return (
-          <div className={styles.swipe}>
-              <p className={styles.save}>Saved</p>
-              {renderCards()}
-              <p className={styles.throw}>Throw</p>
-              <div className={styles.arrowIcon}>
-                <RiArrowRightLine />
-              </div>  
-              <SwipeButtons />
-              <div className={styles.overlay}></div>
-        </div>
-          
-          )
-}
-
-export default Swiper */
