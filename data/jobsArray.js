@@ -23,7 +23,7 @@ export const Jobs = [
     quali:
       'För att vara aktuell att ta Taxiförarlegitimation krävs att du:• har fyllt 21 år • sedan minst två år har körkort med behörigheten B eller har körkort med behörigheten D• uppfyller de medicinska krav som är nödvändiga med hänsyn till säkerheten för passagerare och andra trafikanter • bedöms vara lämplig att tjänstgöra som förare i taxitrafik ifråga om yrkeskompetens och laglydnad • har avlagt godkänt körprov för taxiförarlegitimation.',
     img: IMG1,
-    link: 'https://se.jooble.org/desc/5976588617242177744?ckey=revisor&rgn=2337&pos=2&elckey=-3183001019832304215&p=1&sid=-560416205132263010&jobAge=148&relb=100&brelb=100&bscr=10000&scr=10000&searchTestGroup=1_2_1&iid=4269885247526560603',
+    link: 'https://vakanser.se/jobb/chaufforer+till+skelleftea+taxi+18/',
   },
   {
     employer: 'Northvold',
@@ -43,7 +43,7 @@ export const Jobs = [
     quali:
       'Vi söker dig som är legitimerad sjuksköterska. Har du tidigare erfarenhet av arbete som sjuksköterska är det meriterande. En god ämneskompetens och vilja att hålla dig uppdaterad inom ditt yrkesområde är en förutsättning för att lyckas i rollen. Som person är du självständig, initiativrik och ansvarstagande. Arbetet förutsätter att du har ett strukturerat och systematiskt tillvägagångssätt, öga för detaljer och förmåga att kunna prioritera rätt. Du är pedagogisk i din kommunikation, är hänsynsfull i ditt bemötande och trivs med att arbeta nära i team. För att kunna utföra arbetet är B- körkort ett krav. Skellefteå kommun är finsk förvaltningskommun, det är därför meriterande om du kan finska. Kan du dessutom teckenspråk så ser vi det som en tillgång i våra verksamheter.',
     img: IMG3,
-    link: 'https://se.jooble.org/desc/5976588617242177744?ckey=revisor&rgn=2337&pos=2&elckey=-3183001019832304215&p=1&sid=-560416205132263010&jobAge=148&relb=100&brelb=100&bscr=10000&scr=10000&searchTestGroup=1_2_1&iid=4269885247526560603',
+    link: 'https://skelleftea.se/invanare/jobba-i-skelleftea-kommun/sok-lediga-jobb/jobinformation---visma?guid=c382b30c-a2ed-4a78-8fb4-d9e456ab5986&id=DF75D151-B155-41EC-9B4C-0E67B52DB43D',
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const Jobs = [
   },
   {
     id: 6,
-    employer: 'Skellefteå Lasarett',
+    employer: 'Skellefteå Kommun',
     role: 'Grundlärare åk F-3',
     desc: 'Vi söker nu lärare F-3 som vill vara med och bidra till ett framtida Skellefteå. Här får du varje dag göra en insats som betyder något för eleverna och vara med och forma deras morgondag. Här jobbar vi mest av allt för andra, men även för varandra och det gemensamma målet med vårt arbete är att skolan ska fungera så bra som möjligt för alla elever.',
     quali:
@@ -134,7 +134,6 @@ export const Jobs = [
       'Du är lyhörd för trender i matkultur och vad som händer inom branschen och på din lokala marknad. Du trivs i och stimuleras av en händelserik vardag och har förmåga att ur det skapa en positiv arbetsmiljö. Du är drivkraftig och kommunikativ och vill samarbeta mot ett gemensamt mål för butiken. Verklig framgång bygger på att vi älskar vårt jobb och visar äkta omtanke och glädje för våra kunder! Vi är en stor organisation med många butiker. Det innebär att det också finns många möjligheter att vidareutvecklas. Om du vill och har potential kan du växa med oss! Coop Nord strävar efter att få allsidigt sammansatta personalgrupper med avseende på kön, kulturellt ursprung och ålder.',
     img: IMG12,
     link: 'https://se.jooble.org/desc/5976588617242177744?ckey=revisor&rgn=2337&pos=2&elckey=-3183001019832304215&p=1&sid=-560416205132263010&jobAge=148&relb=100&brelb=100&bscr=10000&scr=10000&searchTestGroup=1_2_1&iid=4269885247526560603',
-    
   },
   {
     id: 13,

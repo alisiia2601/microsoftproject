@@ -4,11 +4,13 @@
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  /* margin-top: 5.5rem; */
-  /* padding-top: 1rem; */
   overflow-y: scroll;
   color: black;
   background-color: #CBC497
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .info{
@@ -68,22 +70,6 @@
   margin-top: .3rem;
   font-weight: 400;
 }
-
-/* .jobContainer > p {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-
-.up {
- font-weight: 400;
- margin-bottom: 1.4rem;
-}
-
-.down{
-  font-weight: 400;
-} */
 
 .clearBoth{
   clear:both;
