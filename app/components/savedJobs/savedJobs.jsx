@@ -9,12 +9,11 @@ import { RiCloseLine } from 'react-icons/ri';
 function SavedJobs() {
   const [jobs, setJobs] = useState([])
 
-  const handleClick = (e) => {
-    e.stopPropagation()
-    console.log("e.target parent: " + e.target.parentNode)
-    console.log("e target: " + e.target)
-    console.log(e.target.attributes)
-  }
+  
+    const removeElement = (index) => {
+      const newJobs = jobs.filter((_, i) => i !== index);
+      setJobs(newJobs);
+    };
 
   useEffect(() => {
     const myjobs = JSON.parse(localStorage.getItem('myjobs'));
@@ -30,17 +29,17 @@ function SavedJobs() {
         <h2 className={styles.info}>sparade Jobb</h2>
         {jobs.map((job, idx) => (      
           <div key={idx} className={styles.container}
-          onClick={(e) => handleClick(e)}
           >
             {/* kan comment out this part to take img away */}
-              {/*   <div className={styles.imgContainer}>
+                <div className={styles.imgContainer}>
               <Image
                 src={job.img}
                 alt={job.employer}
                 fill
+                sizes='width: 76px; height: 76px;'
                 priority
                 className={styles.img} />
-            </div> */}
+            </div>
              {/* ends here */}
             <div className={styles.jobContainer}> 
               <p className={styles.title}>Företag</p>  
@@ -49,7 +48,7 @@ function SavedJobs() {
               <p className={styles.down}>{job.role}</p>
             </div>
             <div className={styles.clearBoth}></div>
-            <RiCloseLine className={styles.closeBtn} onClick={(e) => handleClick(e)} />
+            <RiCloseLine className={styles.closeBtn} onClick={() => removeElement(idx)} />
             </div>
         ))}
       </div>
