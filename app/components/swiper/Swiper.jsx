@@ -48,7 +48,8 @@ const Swiper = () => {
 
       const onCardLeftScreen = (myIdentifier) => {
         console.log('id: ' + myIdentifier + ' left the screen')
-    }
+  }
+
     
     const swiped = (dir,  employer, role, desc, quali, img, id, link) => {
        /*  console.log('id is : ' + id, ' direction is : ' + dir) */
@@ -119,7 +120,7 @@ const Swiper = () => {
                 </div>                        
                 ))
           } 
-          <SwipeButtons />
+          <SwipeButtons setJobData={setJobData} saveJob={saveJob} jobData={jobData} />
         </div>
         </>
     )
