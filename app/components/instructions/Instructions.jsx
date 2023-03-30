@@ -41,7 +41,7 @@ export default function Instructions() {
           />
         <div className={styles.paragraphStyle}>
           <span className={styles.number2}>2</span>
-          <p className={styles.paragraph2}>Klicka på kortet för att <br/>läsa mer information om jobbet</p>
+          <p className={styles.paragraph2}>Klicka på kortet för att läsa mer information om jobbet</p>
         </div>
       </div>
       <Link href={'/Categories'}>

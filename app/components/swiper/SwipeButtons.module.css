@@ -33,6 +33,7 @@
     border-radius: 50%;
     background-color: black;
     margin: 0 .9rem;
+    cursor: pointer;
   }
 
   .iconsWrapper {

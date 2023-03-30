@@ -83,6 +83,15 @@ const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {
                 priority
             />                 
           </div> */}
+          <div>
+        <motion.p
+        className={styles.savedPopup}
+        variants={variants}
+        animate={showMsg ? "show" : "hide"}
+        >
+          Saved job to library &#x2714;
+        </motion.p>
+      </div>
           <div className={styles.info}>
             <h2>{employer}</h2>
         <h4>{role}</h4>
@@ -100,15 +109,6 @@ const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {
           size={27}
         />
       </button>
-          <div>
-        <motion.p
-        className={styles.savedPopup}
-        variants={variants}
-        animate={showMsg ? "show" : "hide"}
-        >
-          Saved job to library &#x2714;
-        </motion.p>
-      </div>
           </article>
           <Footer />
       </div>

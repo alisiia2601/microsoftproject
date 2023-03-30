@@ -39,6 +39,7 @@
   color: white;
   padding: 0 45px;
   border: 0;
+  margin-bottom: 1.5rem;
 }
 
 .applyButton span:last-child {
@@ -122,7 +123,7 @@
   flex-direction: column-reverse;
   color: #7B932E;
   border-radius: 10px;
-  bottom: 37.5rem;
+  /* top: 37.5rem; */
   position: relative;
   z-index: 999;
   font-weight: 600;
