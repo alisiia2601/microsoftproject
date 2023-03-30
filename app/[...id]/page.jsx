@@ -9,7 +9,8 @@ export default function DetailsPage() {
 
   let id = usePathname();
  
-  id = id.replace('/Swipe/', '')
+  // kan göras på andra sätt, men ville testa detta
+  id = id.replace('/', '')
   
   console.log(id)
 
