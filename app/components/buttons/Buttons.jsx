@@ -59,7 +59,7 @@ color: ${props =>
   : props.variant === 'jordDark' 
   ? '#ffffff' 
   : props.variant === 'skogLight' 
-  ? '#000000' 
+  ? '#ffffff' 
   : props.variant === 'info' 
   ? '#ffffff' 
   : props.variant === 'ängLight' 
