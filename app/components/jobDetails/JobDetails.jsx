@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { RiBookmarkLine, RiCloseLine, RiArrowRightLine } from 'react-icons/ri'
+import { RiBookmarkLine, RiCloseLine } from 'react-icons/ri'
 import {motion} from 'framer-motion'
+import { HiArrowLongRight } from 'react-icons/hi2'
+import Footer from "../footer/Footer";
 
 // styles
 import styles from './JobDetails.module.css'
@@ -64,18 +66,23 @@ const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {
     
 
   return (
-      <article className={styles.jobsWrapper} key={id}>
+      <div>
+        <span className={styles.filterDesc}>industri och tillverkning / northvolt</span>
+        <article className={styles.jobsWrapper} key={id}>
           <div className={styles.iconsWrapper}>
               <RiBookmarkLine onClick={() => handleSave()}/>
-              <RiCloseLine onClick={() => router.back()} />
+              <RiCloseLine 
+                onClick={() => router.back()} 
+                size={37}
+              />
           </div>
-          <div className={styles.img}>
+          {/* <div className={styles.img}>
             <Image
                 src={img}
                 alt={employer}
                 priority
             />                 
-          </div>
+          </div> */}
           <div className={styles.info}>
             <h2>{employer}</h2>
         <h4>{role}</h4>
@@ -83,23 +90,29 @@ const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {
             <p>{desc}</p>
         <p>{quali}</p>
         <h3 className={styles.jobDesc}>Lön</h3>
-        <p>45.000</p>
+        <p>45.000 kr</p>
         <h3 className={styles.jobDesc}>Anställningsform</h3>
         <p>Tillsvidareanställning</p>
           </div>
           <button className={styles.applyButton} onClick={handleApply}>
         <span>Ansök här</span>
-        <span>&rarr;</span>
+        <HiArrowLongRight 
+          size={27}
+        />
       </button>
           <div>
         <motion.p
+        className={styles.savedPopup}
         variants={variants}
         animate={showMsg ? "show" : "hide"}
         >
-          Saved job to library
+          Saved job to library &#x2714;
         </motion.p>
       </div>
           </article>
+          <Footer />
+      </div>
+      
   )
 }
 

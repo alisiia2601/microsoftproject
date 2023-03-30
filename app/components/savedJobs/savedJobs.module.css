@@ -6,7 +6,8 @@
   width: 100%;
   overflow-y: scroll;
   color: black;
-  background-color: #CBC497
+  background-color: #CBC497;
+  background-color: transparent;
 }
 
 .wrapper::-webkit-scrollbar {
@@ -31,6 +32,22 @@
   border-radius: 10px;
 }
 
+.linkToJob {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: 60%;
+  background-color: transparent;
+}
+/* 
+.linkToJob:hover,
+.linkToJob:active  {
+  
+} */
+
+
 .imgContainer{
   position: relative;
   width: 76px;
@@ -49,7 +66,7 @@
 }
 
 .jobContainer{
-  margin-left: 1.5rem;
+  margin-left: .8rem;
   display: flex;
   flex-direction: column;
 }
@@ -62,7 +79,7 @@
 
 .up {
   margin-top: .3rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.1rem;
   font-weight: 400;
 }
 

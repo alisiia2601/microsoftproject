@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from "next/image"
 import dynamic from "next/dynamic"
 import Link from "next/link"
@@ -9,24 +9,31 @@ import SwipeButtons from "./SwipeButtons"
 // styles
 import styles from './Swiper.module.css'
 
-const Swiper = ({ data }) => {
-  const [jobData, setJobData] = useState(data)
+
+const Swiper = () => {
+  const [jobData, setJobData] = useState([])
 
   const removeJob = (id) => {
       const newJobs = jobData.filter(job => job.id !== id);
       setJobData(newJobs);
   }
 
+  const removeJobFromLS = (id) => {
+      const filteredJobs = jobData.filter(job => job.id !== id);
+      window.localStorage.setItem('newJobs', JSON.stringify(filteredJobs))
+  }
+
     const TinderCard = dynamic(() => import('react-tinder-card'), {
         ssr: false
     });
+  
+
     
     const saveJob = ( employer, role, desc, quali, img, id, link) => {
                     
         let myjobs = JSON.parse(localStorage.getItem('myjobs') || "[]")
         console.log(myjobs)
-        let newJob;
-    
+        let newJob;    
           if (id) {
             newJob = {
                 employer, role, desc, quali, img, id, link
@@ -41,28 +48,42 @@ const Swiper = ({ data }) => {
 
       const onCardLeftScreen = (myIdentifier) => {
         console.log('id: ' + myIdentifier + ' left the screen')
-    }
+  }
+
     
     const swiped = (dir,  employer, role, desc, quali, img, id, link) => {
-        console.log('id is : ' + id, ' direction is : ' + dir)
+       /*  console.log('id is : ' + id, ' direction is : ' + dir) */
         if (dir == 'up') {
-            console.log('direction is up')
+           /*  console.log('direction is up') */
           saveJob(employer, role, desc, quali, img, id, link)
           removeJob(id)
+          removeJobFromLS(id)
       } 
       if(dir == 'down') {
-          removeJob(id)
-          console.log('swiped down')
+        removeJob(id)
+        removeJobFromLS(id)
+         /*  console.log('swiped down') */
       }
       if(dir == 'left') {
-          removeJob(id)
-          console.log('swiped left')
+        removeJob(id)
+        removeJobFromLS(id)
+         /*  console.log('swiped left') */
       }
       if(dir == 'right') {
-          removeJob(id)
-          console.log('swiped right')
+        removeJob(id)
+        removeJobFromLS(id)
+         /*  console.log('swiped right') */
       }
   }
+
+  useEffect(() => {
+    const newJobs = JSON.parse(localStorage.getItem('newJobs'));
+    if (newJobs) {
+      setJobData(newJobs);
+    } else {
+        setJobData([])
+    }
+}, [])
   
     return (
         <>            
@@ -75,8 +96,8 @@ const Swiper = ({ data }) => {
                     onSwipe={(dir) => swiped(dir,  employer, role, desc, quali, img, id, link)}
                     onCardLeftScreen={() => onCardLeftScreen(id)}            
                     >
-                      <div className={styles.arrowIcon}>
-                      <Link href={'/Swipe/' + id}>
+                      <div className={`${styles.arrowIcon} pressable`}>
+                      <Link href={'/' + id}>
                         <RiArrowRightLine />
                       </Link>
               </div> 
@@ -99,7 +120,7 @@ const Swiper = ({ data }) => {
                 </div>                        
                 ))
           } 
-              <SwipeButtons />
+          <SwipeButtons setJobData={setJobData} />
         </div>
         </>
     )

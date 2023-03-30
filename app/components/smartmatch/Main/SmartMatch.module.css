@@ -25,7 +25,7 @@
 }
 .mainContent p{
     text-align: center;
-    margin: 0px 40px;
+    margin: 0px 50px;
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
@@ -62,7 +62,7 @@
     line-height: 18px;
     letter-spacing: -0.01em;
     color: #ffff;
-
+    margin: 23px 0;
 }
 .button2 p{
     font-weight: 600;
@@ -75,7 +75,7 @@
 .buttons input{
    position: absolute;
    margin-top: 20px;
-   padding:130px ;
+   padding: 130px;
    opacity: 0; 
 }
 .errorMsg{
@@ -91,7 +91,7 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    color: #006400;
+    color: #7B932E;
     margin-top: 30px;
     font-size: 20px;
     margin-top: 100px;

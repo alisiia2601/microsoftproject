@@ -1,13 +1,16 @@
 import React from 'react'
-import { RiBookmarkLine, RiCloseLine } from 'react-icons/ri';
-import { MdOutlineRefresh } from 'react-icons/md';
-
+import { VscRefresh } from 'react-icons/vsc'
+import { BsBookmark } from 'react-icons/bs'
+import { VscClose } from 'react-icons/vsc'
+import { Jobs } from '@/data/jobsArray'
 import styles from './SwipeButtons.module.css'
 
-const SwipeButtons = () => {
+const SwipeButtons = ({ setJobData }) => {
+
 
     const Refresh = () => {
-        console.log('to refresh jobs / cards');
+      console.log('to refresh jobs / cards');
+      setJobData(Jobs)
       };
     
       const doSomething = () => {
@@ -15,19 +18,20 @@ const SwipeButtons = () => {
       };
     
       function handleSave() {
-        console.log('Function for saving job to db or localstorage, cookie etc');
+        console.log('Function for saving job would go here, save on to db or localstorage, cookie etc');
+       
     }
     
   return (
     <div className={styles.iconsWrapper}>
     <div className={styles.iconWrapper}>
-      <MdOutlineRefresh onClick={() => Refresh()} />
+      <VscRefresh onClick={() => Refresh()} />
     </div>
     <div className={styles.iconWrapper}>
-      <RiBookmarkLine onClick={() => handleSave()} />
+      <BsBookmark onClick={() => handleSave()} />
     </div>
     <div className={styles.iconWrapper}>
-      <RiCloseLine onClick={() => doSomething()} />
+      <VscClose onClick={() => doSomething()} />
     </div>
   </div>
   )

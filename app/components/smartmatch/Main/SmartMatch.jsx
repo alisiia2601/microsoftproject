@@ -14,7 +14,7 @@ export default function SmartMatch() {
           priority='true'
           /> 
       </div>
-        <h1>SmartMatch©</h1>
+        <h1>SmartMatch</h1>
         <p>
            Ladda upp ditt CV och hämta in LinkedIn för att förfina dina matchningar
         </p>

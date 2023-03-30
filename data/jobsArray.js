@@ -98,7 +98,7 @@ export const Jobs = [
   {
     id: 9,
     employer: 'Skellefteå Buss',
-    role: 'Busschaufförer till Skellefteå buss',
+    role: 'Busschaufförer',
     desc: 'Är du en vardagshjälte? Eller en busschaufför? För oss på Skellefteå buss är det samma sak. Skellefteå buss tar hand om kollektivtrafiken i Skellefteå, både stadstrafiken och delar av länets linjetrafik. Vi står också bakom flygbussen och skoltransporter.',
     quali:
       'För att kunna jobba som busschaufför hos oss krävs det att du har ett giltigt förarbevis för buss samt YKB.',
@@ -139,7 +139,7 @@ export const Jobs = [
     id: 13,
     employer: 'Dahlgrens Cementgjuteri',
     role: 'Betongarbetare',
-    desc: 'Vi söker just nu 2 st betongarbetare till Dahlgrens cementgjuteri',
+    desc: 'Vi söker just nu 2 st betongarbetare till Dahlgrens cementgjuteri.',
     quali:
       'Vi söker dig som framför allt har rätt inställning och god arbetsmoral. Vi ser gärna att du är noggrann utan att tappa effektiviteten i arbetet. Du har med fördel en bakgrund från industri- eller byggbranschen, mycket meriterande med erfarenhet från arbete i betongbranschen. Vidare är du flexibel och arbetar lika bra ensam som tillsammans med andra. Meriterande om du har kunskap inom svetsning (licenser behövs ej), ritningsläsning samt innehar truck- och traverskort.',
     img: IMG13,

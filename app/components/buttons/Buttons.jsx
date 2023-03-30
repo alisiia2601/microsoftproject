@@ -13,11 +13,12 @@ text-decoration: none;
 vertical-align: middle;
 cursor: pointer;
 user-select: none;
-width: 20.5rem;
+width: 19.5rem;
 padding: 2rem;
 height: 0;
 font-family: 'Inter', sans-serif;
 font-weight: 600;
+font-size: 1rem;
 border: 1px solid transparent;
 background-color: ${props => 
   props.variant === 'light' 
@@ -59,7 +60,7 @@ color: ${props =>
   : props.variant === 'jordDark' 
   ? '#ffffff' 
   : props.variant === 'skogLight' 
-  ? '#000000' 
+  ? '#ffffff' 
   : props.variant === 'info' 
   ? '#ffffff' 
   : props.variant === 'ängLight' 
@@ -83,7 +84,7 @@ export default function Button({type, variant, className, id, onClick, size, chi
       <HiArrowLongRight 
         size={27}
         style={{
-          marginLeft: '174px'
+          marginLeft: '146px'
         }}
       />
     </ButtonComponent>
