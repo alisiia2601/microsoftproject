@@ -102,6 +102,7 @@ const Swiper = () => {
                       </Link>
               </div> 
                     <div className={styles.swiperImage} >
+                    <div className={styles.overlay}></div>
                         <Image
                             className={styles.img}
                             src={img}
@@ -110,7 +111,6 @@ const Swiper = () => {
                             fill
                             />
                       </div>
-                      <div className={styles.overlay}></div>
                         <div className={styles.info}>
                                 <h2 className={styles.employer}>{employer}</h2>
                                 <h4 className={styles.role}>{role}</h4>
