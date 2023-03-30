@@ -13,7 +13,7 @@ text-decoration: none;
 vertical-align: middle;
 cursor: pointer;
 user-select: none;
-width: 20.5rem;
+width: 19.5rem;
 padding: 2rem;
 height: 0;
 font-family: 'Inter', sans-serif;
@@ -83,7 +83,7 @@ export default function Button({type, variant, className, id, onClick, size, chi
       <HiArrowLongRight 
         size={27}
         style={{
-          marginLeft: '174px'
+          marginLeft: '154px'
         }}
       />
     </ButtonComponent>
