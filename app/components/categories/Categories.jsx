@@ -32,7 +32,7 @@ export default function Categories() {
           <p className={styles.paragraph1}>sök jobb utifrån branch</p>
         </div>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button}>
           <p>Naturbruk och djurvård</p>
           <HiArrowLongRight 
@@ -45,7 +45,7 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button2}>
           <p>Industri och tillverkning</p>
           <HiArrowLongRight 
@@ -58,7 +58,7 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button3}>
           <p>Servicenäring</p>
           <HiArrowLongRight 
@@ -71,7 +71,7 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button4}>
           <p>Pedagogik</p>
           <HiArrowLongRight 
@@ -84,7 +84,7 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button5}>
           <p>Sjukvård</p>
           <HiArrowLongRight 
@@ -97,7 +97,7 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button6}>
           <p>Bygg och hantverk</p>
           <HiArrowLongRight 
@@ -110,7 +110,7 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button7}>
           <p>Data och IT</p>
           <HiArrowLongRight 
@@ -123,14 +123,14 @@ export default function Categories() {
         </button>
       </Link>
 
-      <Link href={'/.'}>
+      <Link href={'/Swipe'}>
         <button className={styles.button8}>
           <p>Transport</p>
           <HiArrowLongRight 
             size={27}
             style={{
               color: '#fff',
-              marginLeft: '160px'
+              marginLeft: '167px'
             }}
           />
         </button>

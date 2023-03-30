@@ -44,7 +44,7 @@ export default function Instructions() {
           <p className={styles.paragraph2}>Klicka på kortet för att <br/>läsa mer information om jobbet</p>
         </div>
       </div>
-      <Link href={'/Swipe'}>
+      <Link href={'/Categories'}>
         <Button className={styles.button} variant='skogDark'>Gå vidare</Button>
         {/* <button className={styles.button}>
           <p>Gå vidare</p>
