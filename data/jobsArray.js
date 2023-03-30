@@ -139,7 +139,7 @@ export const Jobs = [
     id: 13,
     employer: 'Dahlgrens Cementgjuteri',
     role: 'Betongarbetare',
-    desc: 'Vi söker just nu 2 st betongarbetare till Dahlgrens cementgjuteri',
+    desc: 'Vi söker just nu 2 st betongarbetare till Dahlgrens cementgjuteri.',
     quali:
       'Vi söker dig som framför allt har rätt inställning och god arbetsmoral. Vi ser gärna att du är noggrann utan att tappa effektiviteten i arbetet. Du har med fördel en bakgrund från industri- eller byggbranschen, mycket meriterande med erfarenhet från arbete i betongbranschen. Vidare är du flexibel och arbetar lika bra ensam som tillsammans med andra. Meriterande om du har kunskap inom svetsning (licenser behövs ej), ritningsläsning samt innehar truck- och traverskort.',
     img: IMG13,
