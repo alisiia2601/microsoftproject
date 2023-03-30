@@ -120,7 +120,7 @@ const Swiper = () => {
                 </div>                        
                 ))
           } 
-          <SwipeButtons setJobData={setJobData} saveJob={saveJob} jobData={jobData} />
+          <SwipeButtons setJobData={setJobData} />
         </div>
         </>
     )
