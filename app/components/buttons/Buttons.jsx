@@ -18,6 +18,7 @@ padding: 2rem;
 height: 0;
 font-family: 'Inter', sans-serif;
 font-weight: 600;
+font-size: 1rem;
 border: 1px solid transparent;
 background-color: ${props => 
   props.variant === 'light' 
@@ -83,7 +84,7 @@ export default function Button({type, variant, className, id, onClick, size, chi
       <HiArrowLongRight 
         size={27}
         style={{
-          marginLeft: '154px'
+          marginLeft: '146px'
         }}
       />
     </ButtonComponent>
