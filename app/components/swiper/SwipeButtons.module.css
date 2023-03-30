@@ -35,9 +35,13 @@
     background-color: black;
     margin: 0 1.25rem;
   }
+
+  .iconsWrapper {
+    padding: 0.5rem;
+  }
   
   .iconWrapper:first-of-type {
-    transform: scale(-1, 1);
+    transform: scale(-1, 1) rotate(90deg);
   }
   
   .iconWrapper:nth-of-type(2) {
@@ -45,6 +49,14 @@
   }
   
   .iconWrapper > svg {
-   font-size: 2rem;
+   font-size: 1.4rem;
+  }
+
+  .iconWrapper:nth-of-type(2) > svg {
+   font-size: 1.2rem;
+  }
+
+  .iconWrapper:nth-of-type(3) > svg {
+   font-size: 1.6rem;
   }
   

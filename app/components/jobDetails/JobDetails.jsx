@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { RiBookmarkLine, RiCloseLine, RiArrowRightLine } from 'react-icons/ri'
+import { RiBookmarkLine, RiCloseLine } from 'react-icons/ri'
 import {motion} from 'framer-motion'
 
 // styles

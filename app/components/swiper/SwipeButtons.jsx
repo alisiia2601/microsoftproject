@@ -1,5 +1,7 @@
 import React from 'react'
-import { RiBookmarkLine, RiCloseLine } from 'react-icons/ri';
+import { VscRefresh } from 'react-icons/vsc'
+import { BsBookmark } from 'react-icons/bs'
+import { VscClose } from 'react-icons/vsc'
 import { MdOutlineRefresh } from 'react-icons/md';
 import styles from './SwipeButtons.module.css'
 
@@ -24,13 +26,13 @@ const SwipeButtons = ({ setJobData, saveJob, jobData }) => {
   return (
     <div className={styles.iconsWrapper}>
     <div className={styles.iconWrapper}>
-      <MdOutlineRefresh onClick={() => Refresh()} />
+      <VscRefresh onClick={() => Refresh()} />
     </div>
     <div className={styles.iconWrapper}>
-      <RiBookmarkLine onClick={() => handleSave(employer, role, desc, quali, img, id, link)} />
+      <BsBookmark onClick={() => handleSave(employer, role, desc, quali, img, id, link)} />
     </div>
     <div className={styles.iconWrapper}>
-      <RiCloseLine onClick={() => doSomething()} />
+      <VscClose onClick={() => doSomething()} />
     </div>
   </div>
   )
