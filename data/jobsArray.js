@@ -98,7 +98,7 @@ export const Jobs = [
   {
     id: 9,
     employer: 'Skellefteå Buss',
-    role: 'Busschaufförer till Skellefteå buss',
+    role: 'Busschaufförer',
     desc: 'Är du en vardagshjälte? Eller en busschaufför? För oss på Skellefteå buss är det samma sak. Skellefteå buss tar hand om kollektivtrafiken i Skellefteå, både stadstrafiken och delar av länets linjetrafik. Vi står också bakom flygbussen och skoltransporter.',
     quali:
       'För att kunna jobba som busschaufför hos oss krävs det att du har ett giltigt förarbevis för buss samt YKB.',
