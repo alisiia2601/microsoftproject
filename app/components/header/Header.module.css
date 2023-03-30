@@ -1,7 +1,7 @@
 .headerContainer{
   width: 110px;
   z-index: 100;
-  margin: 30px;
+  margin: 0 30px;
 }
 
 .headerIcon1{
