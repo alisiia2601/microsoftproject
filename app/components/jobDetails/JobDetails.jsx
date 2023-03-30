@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { RiBookmarkLine, RiCloseLine } from 'react-icons/ri'
 import {motion} from 'framer-motion'
 import { HiArrowLongRight } from 'react-icons/hi2'
+import Footer from "../footer/Footer";
 
 // styles
 import styles from './JobDetails.module.css'
@@ -109,7 +110,9 @@ const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {
         </motion.p>
       </div>
           </article>
+          <Footer />
       </div>
+      
   )
 }
 

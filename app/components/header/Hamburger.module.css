@@ -67,7 +67,7 @@
   .hamburger {
     cursor: pointer;
     display: block;
-    background-color: #F8F8F8;
+    background-color: transparent;
   }
 
   .hamburger.active .navbarButton:nth-child(2) {
