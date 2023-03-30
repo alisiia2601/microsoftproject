@@ -46,12 +46,27 @@ export default function UploadCV() {
           />
           <button className={styles.button1}>
             <p>Ladda upp CV</p> 
-            <CgSoftwareUpload size={24}/>
+            <CgSoftwareUpload 
+              size={24}
+              style={{
+                marginLeft: '135px'
+              }}
+            />
           </button>
           <button className={styles.button2}>
-            <FaLinkedin size={20}/>
+            <FaLinkedin 
+              size={20}
+              style={{
+                marginRight: '5px'
+              }}
+            />
               <p>Connecta med LinkedIn</p> 
-            <HiArrowLongRight size={20}/>
+            <HiArrowLongRight 
+              size={27}
+              style={{
+                marginLeft: '43px'
+              }}
+            />
           </button>
         </div>
     </div>
