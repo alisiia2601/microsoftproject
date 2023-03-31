@@ -69,7 +69,6 @@ const showMore =()=>{
             <RiCloseLine className={styles.closeBtn} onClick={() => removeElement(job.id, idx)} />
             </div>
         ))}
-        </div>
         <div className={styles.morebutton}>
         <BsFillArrowDownCircleFill onClick={showMore} size={58.96}
         style={{
@@ -77,6 +76,7 @@ const showMore =()=>{
           background:"#fff",
           borderRadius:"100%",
         }}/>
+        </div>
         </div>
         </>
     )
