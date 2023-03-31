@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { Jobs } from '@/data/jobsArray';
 import JobDetails from '@/app/components/jobDetails/JobDetails';
 import Header from '/app/components/header/Header.jsx'
+/* import Footer from '../components/footer/Footer'; */
 
 export default function DetailsPage() {
 
@@ -15,7 +16,7 @@ export default function DetailsPage() {
   console.log(id)
 
   return (
-    <div>
+    <>
           <Header />
       {Jobs.map((job) => {
         if (id == job.id) {
@@ -29,6 +30,7 @@ export default function DetailsPage() {
           );
         }
       })}
-    </div>
+       {/* <Footer /> */}
+    </>
   );
 }
