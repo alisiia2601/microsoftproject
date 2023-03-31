@@ -1,4 +1,20 @@
-.main {
+.main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.overlay{
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.62) 19.24%, rgba(0, 0, 0, 0) 68.56%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index:1;
+}
+
+/* .main {
     max-height: calc(100svh - 16.75rem);
     height: 100%;
     position: relative;
@@ -14,14 +30,14 @@
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
     }
-  
+   */
     /* pause button if used */
-  .paused {
+  /* .paused {
     -webkit-animation-play-state: paused; /* for Safari */
-    animation-play-state: paused;
-  }
-  
-  @-webkit-keyframes Gradient {
+    /* animation-play-state: paused;
+  } */
+   
+  /* @-webkit-keyframes Gradient {
     0% {
     background-position: 0% 50%
     }
@@ -55,4 +71,4 @@
   100% {
   background-position: 0% 50%
   }
-  }
+  } */

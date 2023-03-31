@@ -4,6 +4,7 @@ import {useState, useEffect } from 'react'
 import Image from 'next/image';
 import styles from "../savedJobs/savedJobs.module.css"
 import { RiCloseLine } from 'react-icons/ri';
+import {BsFillArrowDownCircleFill} from 'react-icons/bs'
 
 
 
@@ -32,8 +33,13 @@ function SavedJobs() {
         setJobs([])
     }
 }, [])
-   
+
+const showMore =()=>{
+  /*To DO*/
+  console.log('will show more saved jobs');
+}   
     return (
+      <>
       <div className={styles.wrapper}>
         <h2 className={styles.info}>sparade Jobb</h2>
         {jobs.map((job, idx) => (      
@@ -63,7 +69,16 @@ function SavedJobs() {
             <RiCloseLine className={styles.closeBtn} onClick={() => removeElement(job.id, idx)} />
             </div>
         ))}
-      </div>
+        </div>
+        <div className={styles.morebutton}>
+        <BsFillArrowDownCircleFill onClick={showMore} size={58.96}
+        style={{
+          color:'#9EB45A',
+          background:"#fff",
+          borderRadius:"100%",
+        }}/>
+        </div>
+        </>
     )
 }
 
