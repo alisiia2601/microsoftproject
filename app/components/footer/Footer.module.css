@@ -5,15 +5,12 @@
   align-items: center;
   justify-content: center;
   gap: 59px;  
-  left: 0;
   position: relative; /* Absolute or fixed to set footer on bottom it was relative */
   bottom: 0; /* does not do anything if relative */
   left: 0;
   width: 100%;
   z-index: 100;
-
   /* align self to bottom */
-  align-self: flex-end;
 }
 
 

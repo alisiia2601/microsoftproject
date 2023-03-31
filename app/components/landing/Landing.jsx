@@ -33,7 +33,9 @@ export default function Landing() {
           src={circles}
           className={styles.circles}
           alt="circle images"
-          priority="true" />  
+          priority="true"
+          fill
+        />  
       </div>
       <div className={styles.text}>
           <p>Här finns jobben</p>
