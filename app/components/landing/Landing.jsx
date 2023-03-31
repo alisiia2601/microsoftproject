@@ -14,7 +14,7 @@ export default function Landing() {
         alt="background image"
         priority='true'
         fill
-        sizes="100vw"
+        sizes="100%"
         style={{
           objectFit: "cover"
         }} /> 
