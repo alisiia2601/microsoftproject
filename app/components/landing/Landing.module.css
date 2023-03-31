@@ -1,4 +1,5 @@
 .mainContainer {
+  margin: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -72,10 +73,10 @@
 
 .buttonContainer{
   position: relative;
-  margin-bottom: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 4vh;
 }
 .button{
   width: 312px;
@@ -92,5 +93,4 @@
   font-weight: 600;
   font-size: 15px;
   letter-spacing: -0.01em;
-  
 }
