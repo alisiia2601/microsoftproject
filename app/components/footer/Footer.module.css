@@ -1,15 +1,18 @@
 .footerContainer {
-  align-items: center;
-  bottom: 0;
+  height: 5.5rem;  
   display: flex;
   flex-direction: row;
-  height: 5.5rem;
-  gap: 59px;
+  align-items: center;
   justify-content: center;
+  gap: 59px;  
   left: 0;
-  position: absolute;
+  position: fixed;
+  bottom: 0; /* does not do anything */
   width: 100%;
   z-index: 100;
+
+  /* align self to bottom */
+  align-self: flex-end;
 }
 
 
