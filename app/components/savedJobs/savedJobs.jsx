@@ -10,6 +10,7 @@ import {BsFillArrowDownCircleFill} from 'react-icons/bs'
 
 function SavedJobs() {
   const [jobs, setJobs] = useState([])
+  const [visible, setVisible] = useState(3)
   
   const removeElement = (id, index) => {
       // remove from state
@@ -36,13 +37,14 @@ function SavedJobs() {
 
 const showMore =()=>{
   /*To DO*/
+setVisible((preValue)=> preValue + 3)
   console.log('will show more saved jobs');
 }   
     return (
       <>
       <div className={styles.wrapper}>
         <h2 className={styles.info}>sparade Jobb</h2>
-        {jobs.map((job, idx) => (      
+        {jobs.slice(0,visible).map((job, idx) => (      
           <div key={idx} className={styles.container}
           >
             <Link href={'/' + job.id} key={idx} className={styles.linkToJob} 
