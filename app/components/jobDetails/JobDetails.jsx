@@ -88,7 +88,7 @@ const JobDetails = ({ employer, role, desc, quali, img, id ,link}) => {
         variants={variants}
         animate={showMsg ? "show" : "hide"}
         >
-          Sparat &#x2714;
+          Jobb sparat &#x2714;
         </motion.p>
       </div>
           <div className={styles.info}>
