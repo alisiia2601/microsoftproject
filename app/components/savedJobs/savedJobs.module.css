@@ -9,6 +9,16 @@
   color: black;
   background-color: #CBC497;
   background-color: transparent;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.morebutton{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper::-webkit-scrollbar {
