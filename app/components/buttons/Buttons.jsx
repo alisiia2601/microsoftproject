@@ -10,7 +10,6 @@ align-items: center;
 justify-content: center;
 text-align: left;
 text-decoration: none;
-vertical-align: middle;
 cursor: pointer;
 user-select: none;
 width: 19.5rem;
@@ -73,12 +72,12 @@ color: ${props =>
 export default function Button({type, variant, className, id, onClick, size, children}) {
   return ( 
     <ButtonComponent 
-    type={type ? type : 'button'} 
-    variant={variant} 
-    className={className ? `btnComponent ${className}` : 'btnComponent'}
-    id={id} 
-    onClick={onClick} 
-    size={size}
+      type={type ? type : 'button'} 
+      variant={variant} 
+      className={className ? `btnComponent ${className}` : 'btnComponent'}
+      id={id} 
+      onClick={onClick} 
+      size={size}
     >
       {children}
       <HiArrowLongRight 

@@ -11,17 +11,7 @@
   text-align: center;
   overflow: hidden;
   top: 1rem;
-  /* width: 100%;   */
 }
-
-/* .logo {
-  display: flex;
-  justify-content: left;
-  left: 1.61rem;
-  position: absolute;
-  top: 1.25rem;
-  z-index: 100;
-} */
 
 .header {
   font-weight: 700;
@@ -80,26 +70,7 @@
 .dot {
   position: absolute;
 }
+
 .button {
   margin-top: 7rem;
 }
-/* .button {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 312px;
-  height: 69px;
-  top: 91%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #7B932E;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: -0.01em;
-  color: #fff;
-} */
