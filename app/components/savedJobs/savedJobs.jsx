@@ -37,7 +37,7 @@ function SavedJobs() {
 
 const showMore =()=>{
   /*To DO*/
-setVisible((preValue)=> preValue + 3)
+setVisible((preValue)=> preValue + 1)
   console.log('will show more saved jobs');
 }   
     return (
